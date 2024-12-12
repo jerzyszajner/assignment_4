@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/button.css" />
+    <link rel="stylesheet" href="./css/checkbox.css" />
+    <link rel="stylesheet" href="./css/input.css" />
+    <link rel="stylesheet" href="./css/card.css" />
+    <link rel="stylesheet" href="./css/alert.css" />
+    <link rel="stylesheet" href="./css/badge.css" />
+    <link rel="stylesheet" href="./css/toast.css" />
+    <link rel="stylesheet" href="./css/accordion.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <link
+      rel="apple-touch-icon"
+      href="./assets/icons/favicon-apple-touch-icon.png"
+      type="image/png"
+    />
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/icons/favicon-32x32.png" type="image/png" />
+    <link rel="icon" href="./assets/icons/favicon-16x16.png" type="image/png" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon-android-chrome-512x512.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon-android-chrome-192x192.png"
+      type="image/png"
+    />
+    <title>Design System with Interactive Components</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <button class="component__title components__title--active">
+          Button
+        </button>
+        <button class="component__title">Checkbox</button>
+        <button class="component__title">Input</button>
+        <button class="component__title">Card</button>
+        <button class="component__title">Alert</button>
+        <button class="component__title">Badge</button>
+        <button class="component__title">Toast</button>
+        <button class="component__title">Accordion</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section button -->
+      <section class="component hidden" id="button">
+        <h2 class="component__title">Buttons</h2>
+        <div class="component__examples">
+          <button class="button button--default">Default</button>
+          <button class="button button--hover">Hover</button>
+          <button class="button button--active">Active</button>
+        </div>
+      </section>
+
+      <!-- Section checkbox -->
+      <section class="component hidden" id="checkbox">
+        <h2 class="component__title">Checkbox</h2>
+        <div class="component__examples">
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" />
+            <span class="checkbox__label">Default</span>
+          </label>
+          <label class="checkbox checkbox--hover">
+            <input type="checkbox" class="checkbox__input" />
+            <span class="checkbox__label">Hover</span>
+          </label>
+          <label class="checkbox checkbox--active">
+            <input type="checkbox" class="checkbox__input" />
+            <span class="checkbox__label">Active</span>
+          </label>
+        </div>
+      </section>
+      <!-- Section input -->
+      <section class="component hidden" id="input">
+        <h2 class="component__title">Input</h2>
+        <div class="component__examples">
+          <label class="input">
+            <span class="input__label">Default</span>
+            <input
+              type="text"
+              class="input__field"
+              placeholder="Type here..."
+            />
+          </label>
+          <label class="input">
+            <span class="input__label">Hover</span>
+            <input
+              type="text"
+              class="input__field input--hover"
+              placeholder="Hover over me!"
+            />
+          </label>
+          <label class="input">
+            <span class="input__label">Active</span>
+            <input
+              type="text"
+              class="input__field input--active"
+              placeholder="I'm active!"
+            />
+          </label>
+        </div>
+      </section>
+      <!-- Section card -->
+      <section class="component hidden" id="card">
+        <h2 class="component__title">Card</h2>
+        <div class="component__examples">
+          <div class="card">
+            <h3 class="card__title">Default</h3>
+            <p class="card__description">This is a default card.</p>
+          </div>
+          <div class="card card--hover">
+            <h3 class="card__title">Hover</h3>
+            <p class="card__description">This card reacts on hover.</p>
+          </div>
+          <div class="card card--active">
+            <h3 class="card__title">Active</h3>
+            <p class="card__description">This card is active.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Section alert -->
+      <section class="component hidden" id="alert">
+        <h2 class="component__title">Alert</h2>
+        <div class="component__examples">
+          <button class="alert-trigger">Show Alert</button>
+          <div class="alert hidden" id="dynamic-alert">
+            This is a dynamic alert!
+          </div>
+        </div>
+      </section>
+
+      <!-- Section badge -->
+      <section class="component hidden" id="badge">
+        <h2 class="component__title">Badge</h2>
+        <div class="component__examples">
+          <span class="badge">Default</span>
+          <span class="badge badge--hover">Hover</span>
+          <span class="badge badge--active">Active</span>
+        </div>
+      </section>
+      <!-- Section toast -->
+      <section class="component hidden" id="toast">
+        <h2 class="component__title">Toast</h2>
+        <div class="component__examples">
+          <div class="toast">Default Toast</div>
+          <div class="toast toast--hover">Hover Toast</div>
+          <div class="toast toast--active">Active Toast</div>
+        </div>
+      </section>
+
+      <!-- Section accordion -->
+      <section class="component hidden" id="accordion">
+        <!-- First accordion -->
+        <div class="accordion">
+          <div class="accordion__title-container">
+            <h3 class="accordion__title">
+              What services does your company provides?
+            </h3>
+            <button class="accordion__toggle-button">
+              <i
+                class="fa-solid fa-arrow-down fa-xl accordion__toggle-logo"
+              ></i>
+            </button>
+          </div>
+
+          <div class="accordion__description-container">
+            <p class="accordion__description">
+              What services does your company provides? Eos quam ipsa ipsum quo
+              quas neque expedita blanditiis aperiam tenetur voluptas autem ea
+              illo natus ab, omnis alias, debitis quos tempora.
+            </p>
+          </div>
+        </div>
+
+        <!-- Secound accordion -->
+        <div class="accordion">
+          <div class="accordion__title-container">
+            <h3 class="accordion__title">
+              What payment methods do you accept?
+            </h3>
+            <button class="accordion__toggle-button">
+              <i
+                class="fa-solid fa-arrow-down fa-xl accordion__toggle-logo"
+              ></i>
+            </button>
+          </div>
+
+          <div class="accordion__description-container">
+            <p class="accordion__description">
+              What payment methods do you accept? Iste ea assumenda ad
+              voluptatibus, unde laborum nostrum nihil repellendus labore
+              veritatis quisquam aliquid atque, illo dolores similique quibusdam
+              at a, enim expedita. Animi consequatur doloribus dolor, alias
+              eligendi at totam. Sapiente!
+            </p>
+          </div>
+        </div>
+
+        <!-- Third accordion -->
+        <div class="accordion">
+          <div class="accordion__title-container">
+            <h3 class="accordion__title">
+              Do you offer a warranty on your products or services?
+            </h3>
+            <button class="accordion__toggle-button">
+              <i
+                class="fa-solid fa-arrow-down fa-xl accordion__toggle-logo"
+              ></i>
+            </button>
+          </div>
+
+          <div class="accordion__description-container">
+            <p class="accordion__description">
+              Do you offer a warranty on your products or services? Nostrum
+              nesciunt id molestias voluptates animi, ipsam deleniti, debitis
+              assumenda repellendus facere quos? Voluptatibus iste dolor alias
+              commodi necessitatibus dolore eius quibusdam nobis aspernatur
+              facere magnam incidunt facilis, minus laboriosam minima natus,
+              veritatis suscipit quia ratione qui tempora animi quod laborum!
+              Iusto.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fourth accordion -->
+        <div class="accordion">
+          <div class="accordion__title-container">
+            <h3 class="accordion__title">
+              How do I request a quote for your services?
+            </h3>
+            <button class="accordion__toggle-button">
+              <i
+                class="fa-solid fa-arrow-down fa-xl accordion__toggle-logo"
+              ></i>
+            </button>
+          </div>
+
+          <div class="accordion__description-container">
+            <p class="accordion__description">
+              How do I request a quote for your services? Nemo, laudantium
+              similique consequatur ipsam, illum doloremque earum eveniet
+              voluptatibus vel quod corporis incidunt minima soluta ad. Error
+              hic corporis eveniet quaerat. Amet quidem nobis reprehenderit modi
+              nihil id perferendis ullam aut quia, dolorem doloremque
+              consequuntur dignissimos, quasi deleniti autem beatae quaerat,
+              optio totam ex. Sunt repudiandae nisi voluptate cum quae placeat.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

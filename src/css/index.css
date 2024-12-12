@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Lato-Regular;
+    src: url(../assets/fonts/Lato-Regular.ttf);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Lato-Regular;
+    background-color: var(--color-primary);
+}
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+    padding: var(--spacing-large);
+}
+
+.component__title {
+    width: 6rem;
+    height: var(--spacing-x-large);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.component__title:hover {
+    background-color: var(--hover-color);
+}
+
+.component__title:active {
+    color: var(--active-color);
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+}
+
+.component__title {
+    margin-bottom: var(--spacing-medium);
+    color: black;
+}
+
+.component__examples {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+}
+
+
+.hidden {
+    display: none;
+}

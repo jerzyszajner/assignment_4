@@ -1,0 +1,23 @@
+.toast {
+    background-color: var(--color-secondary);
+    color: var(--color-black);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: var(--font-size-base);
+    max-width: 300px;
+    text-align: center;
+    margin: var(--spacing-medium) auto;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.toast--hover:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color-primary);
+}
+
+.toast--active {
+    background-color: var(--active-color);
+    color: var(--text-color-primary);
+}
