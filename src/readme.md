@@ -26,7 +26,7 @@ The purpose of this assignment was to gain practical experience in creating and 
 ## Deployment
 
 The project is deployed on Netlify.  
-**Visit the live project here:** [Netlify Deployment Link](https://luminous-biscochitos-6f56dd.netlify.app/)
+**Visit the live project here:** [Netlify Deployment Link](https://interactive-design-system.netlify.app/)
 
 ## Acknowledgements
 
