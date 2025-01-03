@@ -64,3 +64,9 @@ section {
 .rotate-arrow {
     transform: rotate(180deg);
 }
+
+@media screen and (max-width: 900px) {
+    .accordion {
+        width: 95%;
+    }
+}
