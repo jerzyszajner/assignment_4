@@ -1,92 +1,119 @@
-// Selecting navigation elements
-const navButtons = document.querySelectorAll(".component__title");
-const sections = document.querySelectorAll(".component");
-
-// Utility function to hide all sections
-const hideAllSections = () => {
-  sections.forEach((section) => section.classList.add("hidden"));
-};
-
-// Utility function to reset active state of navigation buttons
-const resetActiveButtons = () => {
-  navButtons.forEach((button) =>
-    button.classList.remove("components__title--active")
-  );
-};
-
-// Handle navigation button clicks
-const handleNavClick = (event) => {
-  const clickedButton = event.currentTarget;
-  const targetId = clickedButton.textContent
-    .trim()
-    .toLowerCase()
-    .replace(/\s/g, "-"); // Replace spaces with dashes
-  const targetSection = document.getElementById(targetId);
-
-  if (!targetSection) return;
-
-  // Reset states and show the selected section
-  hideAllSections();
-  resetActiveButtons();
-  targetSection.classList.remove("hidden");
-  clickedButton.classList.add("components__title--active");
-};
-
-// Initialize navigation
+// Function to initialize navigation and handle section visibility
 const initializeNavigation = () => {
-  navButtons.forEach((button) => {
-    button.addEventListener("click", handleNavClick);
-  });
+  const navButtons = document.querySelectorAll(".navbar__item");
+  const compSections = document.querySelectorAll(".component");
 
-  // Set default state (first button active and corresponding section visible)
-  hideAllSections();
-  if (sections.length > 0 && navButtons.length > 0) {
-    sections[0].classList.remove("hidden");
-    navButtons[0].classList.add("components__title--active");
-  }
+  navButtons.forEach((navButton, index) => {
+    navButton.addEventListener("click", (e) => {
+      compSections.forEach((section) => section.classList.add("hidden"));
+
+      navButtons.forEach((button) =>
+        button.classList.remove("navbar__item--active")
+      );
+
+      e.target.classList.add("navbar__item--active");
+      compSections[index].classList.remove("hidden");
+    });
+  });
 };
 
-// Selecting accordion elements
-const titleContainers = document.querySelectorAll(
-  ".accordion__title-container"
-);
-const descriptionContainers = document.querySelectorAll(
-  ".accordion__description-container"
-);
-const accordionToggleLogos = document.querySelectorAll(
-  ".accordion__toggle-logo"
-);
+// Function to initialize alert functionality
+const initializeButton = () => {
+  const activButton = document.querySelector(".component__button--active");
 
-// Handle accordion toggle
-titleContainers.forEach((title, index) => {
-  title.addEventListener("click", () => {
-    descriptionContainers[index].classList.toggle(
-      "accordion__description-container--active"
-    );
-    accordionToggleLogos[index].classList.toggle("rotate-arrow");
+  activButton.addEventListener("click", () => {
+    activButton.classList.toggle("component__button--active");
+
+    if (activButton.classList.contains("component__button--active")) {
+      activButton.textContent = "Active";
+    } else {
+      activButton.textContent = "Default";
+    }
   });
-});
+};
+
+// Function to initialize accordion functionality
+const initializeAccordion = () => {
+  const titleContainers = document.querySelectorAll(
+    ".accordion__title-container"
+  );
+  const descriptionContainers = document.querySelectorAll(
+    ".accordion__description-container"
+  );
+  const accordionToggleLogos = document.querySelectorAll(
+    ".accordion__toggle-logo"
+  );
+
+  // Handle accordion toggle
+  titleContainers.forEach((title, index) => {
+    title.addEventListener("click", () => {
+      descriptionContainers[index].classList.toggle(
+        "accordion__description-container--active"
+      );
+      accordionToggleLogos[index].classList.toggle("rotate-arrow");
+    });
+  });
+};
 
 // Function to initialize alert functionality
 const initializeAlert = () => {
-  const alertTrigger = document.querySelector(".alert-trigger");
-  const dynamicAlert = document.getElementById("dynamic-alert");
+  const alertButton = document.querySelector(".component__alert-button");
+  const dynamicAlert = document.querySelector(".component__alert-message");
 
-  if (alertTrigger && dynamicAlert) {
-    alertTrigger.addEventListener("click", () => {
-      // Show the alert
-      dynamicAlert.classList.remove("hidden");
+  alertButton.addEventListener("click", () => {
+    // Show the alert
+    dynamicAlert.classList.add("visible");
+    // Disable the button
+    alertButton.classList.add("button-disabled");
+    alertButton.disabled = true;
 
-      // Hide the alert automatically after 3 seconds
-      setTimeout(() => {
-        dynamicAlert.classList.add("hidden");
-      }, 3000);
+    // Hide the alert automatically after 3 seconds
+    setTimeout(() => {
+      dynamicAlert.classList.remove("visible");
+      alertButton.disabled = false;
+      alertButton.classList.remove("button-disabled");
+    }, 3000);
+  });
+};
+
+const initializeModal = () => {
+  const modalButton = document.querySelector(".modal__button");
+  const displayModal = document.querySelector(".modal__content");
+  const closeModal = document.querySelector(".modal__close-button");
+
+  modalButton.addEventListener("click", () => {
+    modalButton.classList.add("hidden");
+    displayModal.classList.remove("hidden");
+
+    closeModal.addEventListener("click", () => {
+      displayModal.classList.add("hidden");
+      modalButton.classList.remove("hidden");
     });
-  }
+  });
+};
+
+// Function to initialize toast functionality
+const initializeToast = () => {
+  const toastButton = document.querySelector(".component__toast-button");
+  const dynamicMessage = document.querySelector(".component__toast-message");
+
+  toastButton.addEventListener("click", () => {
+    // Show the message
+    dynamicMessage.classList.add("visible");
+
+    // Hide the messahe automatically after 5 seconds
+    setTimeout(() => {
+      dynamicMessage.classList.remove("visible");
+    }, 5000);
+  });
 };
 
 // Initialize app
 document.addEventListener("DOMContentLoaded", () => {
   initializeNavigation();
+  initializeButton();
+  initializeAccordion();
   initializeAlert();
+  initializeModal();
+  initializeToast();
 });

@@ -3,48 +3,50 @@
     src: url(../assets/fonts/Lato-Regular.ttf);
 }
 
+html,
 body {
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: Lato-Regular;
-    background-color: var(--color-primary);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .navbar {
+    background-color: var(--color-primary);
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     padding: var(--spacing-large);
+    justify-content: center;
 }
 
-.component__title {
-    width: 6rem;
-    height: var(--spacing-x-large);
+.navbar__item {
+    padding: 15px 32px;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.component__title:hover {
+.navbar__item--active {
     background-color: var(--hover-color);
-}
-
-.component__title:active {
-    color: var(--active-color);
+    border-color: var(--color-base);
 }
 
 main {
-    width: 100%;
-    min-height: 100vh;
-    height: inherit;
+    flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-header {
-    width: 100%;
-}
-
-.component__title {
+.component__name {
     margin-bottom: var(--spacing-medium);
     color: black;
 }

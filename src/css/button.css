@@ -1,14 +1,31 @@
-.button {
-    width: var(--spacing-x-large);
-    height: var(--spacing-large);
+.component__button {
+    padding: 15px 32px;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s linear;
 }
 
-.button--hover:hover {
+.component__button:active {
+    transform: scale(0.99);
+}
+
+
+.component__button:disabled {
+    cursor: not-allowed;
+    border: none;
+}
+
+.component__button--disabled:hover {
+    cursor: not-allowed;
+}
+
+
+.component__button--hover:hover {
     background-color: var(--hover-color);
 }
 
-.button--active:active {
-    color: var(--active-color);
+.component__button--active {
+    transition: background-color 0.2s linear;
+    background-color: var(--hover-color);
+    border-color: var(--color-base);
 }

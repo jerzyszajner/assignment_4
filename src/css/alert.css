@@ -1,25 +1,41 @@
-.alert {
-    padding: var(--spacing-medium);
-    border: 1px solid var(--color-secondary);
+.component__alert-button {
+    padding: 15px 32px;
     border-radius: 4px;
-    background-color: var(--color-secondary);
-    color: var(--color-black);
-    transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
-    text-align: center;
-    max-width: 300px;
-    margin: 0 auto;
+    transition: background-color 0.3s linear;
 }
 
-.alert--hover:hover {
+.component__alert-button:hover {
     background-color: var(--hover-color);
 }
 
-.alert--active:active {
-    background-color: var(--hover-color-2);
-    transform: scale(0.98);
+.component__alert-button:active {
+    transform: scale(0.99);
 }
 
-.hidden {
-    display: none;
+.component__alert-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.component__alert-message {
+    color: var(--color-base);
+    background-color: var(--hover-color-2);
+    border: 2px solid black;
+    padding: 15px 32px;
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.9s linear;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.visible {
+    opacity: 1;
+}
+
+.button-disabled {
+    cursor: not-allowed;
 }

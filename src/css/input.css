@@ -13,15 +13,9 @@
     padding: var(--spacing-small);
     border: 1px solid var(--color-black);
     border-radius: 4px;
-    background-color: var(--color-secondary);
     font-size: var(--font-size-base);
 }
 
 .input--hover:hover {
     border-color: var(--hover-color-2);
-}
-
-.input--active:focus {
-    border-color: var(--active-color);
-    outline: none;
 }

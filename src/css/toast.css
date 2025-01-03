@@ -1,23 +1,35 @@
-.toast {
-    background-color: var(--color-secondary);
-    color: var(--color-black);
-    padding: var(--spacing-small) var(--spacing-medium);
+.component {
+    position: relative;
+}
+
+.component__toast-button {
+    padding: 15px 32px;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: var(--font-size-base);
-    max-width: 300px;
-    text-align: center;
-    margin: var(--spacing-medium) auto;
-    transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
+    transition: background-color 0.3s linear;
 }
 
-.toast--hover:hover {
+.component__toast-button:hover {
     background-color: var(--hover-color);
-    color: var(--text-color-primary);
 }
 
-.toast--active {
-    background-color: var(--active-color);
-    color: var(--text-color-primary);
+.component__toast-button:active {
+    transform: scale(0.99);
+}
+
+.component__toast-message {
+    color: black;
+    background-color: var(--color-base);
+    border: 2px solid black;
+    padding: 15px 32px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.9s linear;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.visible {
+    opacity: 1;
 }

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/input.css" />
     <link rel="stylesheet" href="./css/card.css" />
     <link rel="stylesheet" href="./css/alert.css" />
-    <link rel="stylesheet" href="./css/badge.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <link rel="stylesheet" href="./css/toast.css" />
     <link rel="stylesheet" href="./css/accordion.css" />
     <link rel="stylesheet" href="./css/index.css" />
@@ -42,51 +42,56 @@
   <body>
     <header>
       <nav class="navbar">
-        <button class="component__title components__title--active">
-          Button
-        </button>
-        <button class="component__title">Checkbox</button>
-        <button class="component__title">Input</button>
-        <button class="component__title">Card</button>
-        <button class="component__title">Alert</button>
-        <button class="component__title">Badge</button>
-        <button class="component__title">Toast</button>
-        <button class="component__title">Accordion</button>
+        <button class="navbar__item navbar__item--active">Button</button>
+        <button class="navbar__item">Checkbox</button>
+        <button class="navbar__item">Input</button>
+        <button class="navbar__item">Card</button>
+        <button class="navbar__item">Alert</button>
+        <button class="navbar__item">Modal</button>
+        <button class="navbar__item">Toast</button>
+        <button class="navbar__item">Accordion</button>
       </nav>
     </header>
 
     <main>
       <!-- Section button -->
-      <section class="component hidden" id="button">
-        <h2 class="component__title">Buttons</h2>
+      <section class="component" id="button">
+        <h2 class="component__name">Button</h2>
         <div class="component__examples">
-          <button class="button button--default">Default</button>
-          <button class="button button--hover">Hover</button>
-          <button class="button button--active">Active</button>
+          <button class="component__button" disabled>Disabled</button>
+          <button class="component__button component__button--default">
+            Default
+          </button>
+          <button class="component__button component__button--hover">
+            Hover
+          </button>
+          <button class="component__button component__button--active">
+            Active
+          </button>
         </div>
       </section>
 
       <!-- Section checkbox -->
       <section class="component hidden" id="checkbox">
-        <h2 class="component__title">Checkbox</h2>
+        <h2 class="component__name">Checkbox</h2>
         <div class="component__examples">
-          <label class="checkbox">
-            <input type="checkbox" class="checkbox__input" />
-            <span class="checkbox__label">Default</span>
+          <label class="component__checkbox">
+            <input type="checkbox" class="component__checkbox-input" />
+            <span class="component__checkbox-label">Default</span>
           </label>
-          <label class="checkbox checkbox--hover">
-            <input type="checkbox" class="checkbox__input" />
-            <span class="checkbox__label">Hover</span>
+          <label class="component__checkbox">
+            <input type="checkbox" class="component__checkbox-input" disabled />
+            <span class="component__checkbox-label">Disabled</span>
           </label>
-          <label class="checkbox checkbox--active">
-            <input type="checkbox" class="checkbox__input" />
-            <span class="checkbox__label">Active</span>
+          <label class="component__checkbox">
+            <input type="checkbox" class="component__checkbox-input" checked />
+            <span class="component__checkbox-label">Checked</span>
           </label>
         </div>
       </section>
       <!-- Section input -->
       <section class="component hidden" id="input">
-        <h2 class="component__title">Input</h2>
+        <h2 class="component__name">Input</h2>
         <div class="component__examples">
           <label class="input">
             <span class="input__label">Default</span>
@@ -105,18 +110,19 @@
             />
           </label>
           <label class="input">
-            <span class="input__label">Active</span>
+            <span class="input__label">Disabled</span>
             <input
               type="text"
-              class="input__field input--active"
-              placeholder="I'm active!"
+              class="input__field input--disabled"
+              placeholder="I'm disabled!"
+              disabled
             />
           </label>
         </div>
       </section>
       <!-- Section card -->
       <section class="component hidden" id="card">
-        <h2 class="component__title">Card</h2>
+        <h2 class="component__name">Card</h2>
         <div class="component__examples">
           <div class="card">
             <h3 class="card__title">Default</h3>
@@ -134,32 +140,38 @@
       </section>
       <!-- Section alert -->
       <section class="component hidden" id="alert">
-        <h2 class="component__title">Alert</h2>
+        <h2 class="component__name">Alert</h2>
         <div class="component__examples">
-          <button class="alert-trigger">Show Alert</button>
-          <div class="alert hidden" id="dynamic-alert">
+          <button class="component__alert-button">Show Alert</button>
+          <div class="component__alert-message" id="dynamic-alert">
             This is a dynamic alert!
           </div>
         </div>
       </section>
 
-      <!-- Section badge -->
-      <section class="component hidden" id="badge">
-        <h2 class="component__title">Badge</h2>
+      <!-- Section modal -->
+      <section class="component hidden" id="modal">
+        <h2 class="component__name">Modal</h2>
         <div class="component__examples">
-          <span class="badge">Default</span>
-          <span class="badge badge--hover">Hover</span>
-          <span class="badge badge--active">Active</span>
+          <button class="modal__button">Show Modal</button>
+        </div>
+        <div class="modal__content hidden">
+          <h3 class="modal__title">To Be, or Not to Be</h3>
+          <span class="modal__text">
+            <p>Hello World!</p>
+            <p>Modals are awesome!</p>
+          </span>
+          <button class="modal__button modal__close-button">Close</button>
         </div>
       </section>
+
       <!-- Section toast -->
       <section class="component hidden" id="toast">
-        <h2 class="component__title">Toast</h2>
+        <h2 class="component__name">Toast</h2>
         <div class="component__examples">
-          <div class="toast">Default Toast</div>
-          <div class="toast toast--hover">Hover Toast</div>
-          <div class="toast toast--active">Active Toast</div>
+          <button class="component__toast-button">Show Toast</button>
         </div>
+        <div class="component__toast-message">Some text some message..</div>
       </section>
 
       <!-- Section accordion -->

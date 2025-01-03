@@ -1,5 +1,6 @@
 :root {
     /* COLORS */
+    --color-base: #ffffff;
     --color-primary: #4a628a;
     --color-black: black;
     --color-green: green;
@@ -7,7 +8,7 @@
     --text-color-primary: #f5f5f5;
     --hover-color: #99ccff;
     --hover-color-2: #fe0505;
-    --active-color: red;
+    --active-color: green;
 
     /* SPACING */
     --spacing-small: 0.5rem;
