@@ -4,19 +4,21 @@ The purpose of this assignment was to gain practical experience in creating and 
 
 ## Components Included
 
-- Buttons
-- Checkboxes
-- Inputs
+- Navigation
+- Slideshow
+- Button
+- Checkbox
+- Input
 - Cards
-- Alerts
-- Badges
-- Tooltips
+- Alert
+- Modal
+- Toast
 - Accordion
 
 ## Features
 
 - Modular CSS with **BEM methodology**
-- Responsive design using **CSS Grid** and **Flexbox**
+- Responsive design using **Flexbox**
 - Interactive components with clear and reusable states
 
 ## GitHub Repository

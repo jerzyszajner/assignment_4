@@ -10,7 +10,7 @@ import initToast from "./components/toast.js";
 // Function to initialize the app
 const initializeApp = () => {
   initNavigation(); // Initialize navigation
-  initSlideshow(); // Initialize carousel
+  initSlideshow(); // Initialize slideshow
   initButton(); // Initialize button
   initAccordion(); // Initialize accordion
   initAlert(); // Initialize alert
