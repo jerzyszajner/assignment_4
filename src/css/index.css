@@ -18,26 +18,6 @@ header {
     z-index: 999;
 }
 
-.navbar {
-    background-color: var(--color-primary);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: var(--spacing-large);
-    justify-content: center;
-}
-
-.navbar__item {
-    padding: 15px 32px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.navbar__item--active {
-    background-color: var(--hover-color);
-    border-color: var(--color-base);
-}
-
 main {
     flex: 1;
     display: flex;
@@ -54,6 +34,7 @@ main {
 .component__examples {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--spacing-medium);
 }
 

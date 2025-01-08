@@ -1,0 +1,19 @@
+.navbar {
+    background-color: var(--color-primary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: var(--spacing-large);
+    justify-content: center;
+}
+
+.navbar__item {
+    padding: 15px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar__item--active {
+    background-color: var(--hover-color);
+    border-color: var(--color-base);
+}

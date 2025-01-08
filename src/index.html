@@ -9,6 +9,8 @@
     />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/navigation.css" />
+    <link rel="stylesheet" href="./css/slideshow.css" />
     <link rel="stylesheet" href="./css/button.css" />
     <link rel="stylesheet" href="./css/checkbox.css" />
     <link rel="stylesheet" href="./css/input.css" />
@@ -41,8 +43,10 @@
   </head>
   <body>
     <header>
+      <!-- Navigation -->
       <nav class="navbar">
-        <button class="navbar__item navbar__item--active">Button</button>
+        <button class="navbar__item navbar__item--active">Slideshow</button>
+        <button class="navbar__item">Button</button>
         <button class="navbar__item">Checkbox</button>
         <button class="navbar__item">Input</button>
         <button class="navbar__item">Card</button>
@@ -54,8 +58,16 @@
     </header>
 
     <main>
+      <!-- Section slideshow -->
+      <section class="component" id="slideshow">
+        <h2 class="component__name">Slideshow</h2>
+        <div class="component__examples">
+          <div class="slideshow__container"></div>
+        </div>
+      </section>
+
       <!-- Section button -->
-      <section class="component" id="button">
+      <section class="component hidden" id="button">
         <h2 class="component__name">Button</h2>
         <div class="component__examples">
           <button class="component__button" disabled>Disabled</button>
@@ -89,6 +101,7 @@
           </label>
         </div>
       </section>
+
       <!-- Section input -->
       <section class="component hidden" id="input">
         <h2 class="component__name">Input</h2>

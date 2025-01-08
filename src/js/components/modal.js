@@ -1,3 +1,4 @@
+// Function to initialize modal functionality
 const initModal = () => {
   const modalButton = document.querySelector(".modal__button");
   const displayModal = document.querySelector(".modal__content");
@@ -13,5 +14,4 @@ const initModal = () => {
     });
   });
 };
-
 export default initModal;

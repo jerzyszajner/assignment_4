@@ -1,5 +1,6 @@
 // Import components
 import initNavigation from "./components/navigation.js";
+import initSlideshow from "./components/slideshow.js";
 import initButton from "./components/button.js";
 import initAccordion from "./components/accordion.js";
 import initAlert from "./components/alert.js";
@@ -9,6 +10,7 @@ import initToast from "./components/toast.js";
 // Function to initialize the app
 const initializeApp = () => {
   initNavigation(); // Initialize navigation
+  initSlideshow(); // Initialize carousel
   initButton(); // Initialize button
   initAccordion(); // Initialize accordion
   initAlert(); // Initialize alert
